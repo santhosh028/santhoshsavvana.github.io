@@ -17,6 +17,7 @@ header {
     background-color: #1a1a2e;
     color: #fff;
     padding: 2rem;
+    text-align: center;
 }
 
 .header-container {
@@ -26,7 +27,6 @@ header {
 }
 
 .profile-pic {
-    position: relative;
     margin-right: 20px;
 }
 
@@ -36,7 +36,6 @@ header {
     border-radius: 50%;
     background-position: top;
     background-size: cover;
-    position: relative;
     border: 5px solid #fff;
 }
 
@@ -51,6 +50,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
+    text-align: center;
 }
 
 .header-details h1 {
@@ -70,8 +71,10 @@ header {
 
 .nav-links {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -112,4 +115,49 @@ footer a {
 
 footer a:hover {
     color: #fff;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically on mobile */
+        padding: 1rem;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-pic {
+        margin: 0 0 1rem 0; /* Center profile picture on mobile */
+    }
+    
+    .profile-image {
+        width: 100px; /* Smaller profile image for mobile */
+        height: 100px;
+    }
+    
+    .header-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-details p.description {
+        font-size: 1rem;
+    }
+
+    .header-details p.details {
+        font-size: 0.9rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
